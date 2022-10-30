@@ -50,7 +50,7 @@ class ImageGallery extends Component {
     fetchImagesByName(options)
       .then(images => {
         if (images.length === 0) {
-          return toast.error(`Sorry, there are no images matching ${query}. Please try again.`)
+          return toast.error(`Sorry, there are no images matching ${query}.`)
         }
         this.setState(prevState => ({
           images: [...prevState.images, ...images],
@@ -96,8 +96,6 @@ class ImageGallery extends Component {
             />
           ))}
         </Gallery>
-
-
 
         {showButton && (
           <Button onClick={this.fetchImages} isLoading={isLoading} />
