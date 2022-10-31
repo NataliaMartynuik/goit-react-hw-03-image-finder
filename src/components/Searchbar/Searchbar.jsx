@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
+import PropTypes from 'prop-types';
 import { SearchbarHeader, SearchForm, SearchButton, FormInput } from './Searchbar.styled'
 import { FaSearch } from 'react-icons/fa';
 
@@ -44,4 +45,9 @@ class Searchbar extends Component {
   }
 }
 
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
+
 export default Searchbar;
+
